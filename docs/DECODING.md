@@ -6,8 +6,8 @@ else opening this repo) can audit the reconstruction.
 
 ## Recovering the binary
 
-The keyboard's ATmega32U4 was put into Caterina bootloader mode (held the
-reset button on the back of the PCB). Caterina enumerates as a USB CDC
+The keyboard's ATmega32U4 was put into Caterina bootloader mode (poked the
+reset button through the hole in the bottom plate with a paperclip). Caterina enumerates as a USB CDC
 serial device for ~8 seconds. `avrdude` over the `avr109` protocol read the
 full 32KB flash:
 

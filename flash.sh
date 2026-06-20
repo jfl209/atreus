@@ -11,7 +11,8 @@
 #
 # To put the keyboard into bootloader mode:
 #   - Try the keymap binding first (often Fn+Esc on the stock layout).
-#   - Or open the case and press the reset button on the underside of the PCB.
+#   - Or poke a paperclip through the small hole in the bottom plate to hit
+#     the reset button on the PCB.
 #   The bootloader window is ~8 seconds.
 
 set -euo pipefail

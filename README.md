@@ -88,8 +88,9 @@ and port forward in small steps.
 ```
 
 To enter bootloader mode: hold `Fn+Esc` if the binding survived in your
-build, otherwise press the reset button on the underside of the PCB
-(requires removing the bottom plate).
+build, otherwise press the reset button on the bottom of the keyboard —
+it's accessible through a small hole in the bottom plate, poke it with a
+paperclip.
 
 ## Layout of this repo
 
