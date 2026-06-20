@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Atreus + Trackpoint keymap</title>
+<style>
+@page { size: letter landscape; margin: 0.5in; }
+body { font-family: -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif;
+       color: #222; margin: 0; padding: 0; }
+.layer { page-break-after: always; padding: 0; }
+.layer:last-child { page-break-after: auto; }
+h1 { font-size: 18pt; margin: 0 0 4pt 0; font-weight: 600; }
+.desc { font-size: 9.5pt; color: #555; margin-bottom: 14pt; max-width: 9in; line-height: 1.4; }
+
+.matrix { display: grid; grid-template-columns: repeat(12, 1fr); gap: 6pt;
+          max-width: 9in; }
+.key { border: 1pt solid #888; border-radius: 5pt; padding: 8pt 4pt;
+       min-height: 38pt; display: flex; align-items: center; justify-content: center;
+       text-align: center; font-size: 11pt; line-height: 1.2;
+       white-space: pre-line; background: #fafafa; }
+.key.gap { border: 1pt dashed #ccc; background: transparent; color: #bbb;
+           font-size: 7pt; }
+.key.mod { background: #e8e8f5; font-weight: 600; }
+.key.layer { background: #e8f5e8; font-weight: 600; }
+.key.special { background: #fff5e6; }
+.key.mouse { background: #fde8e8; font-size: 9pt; }
+.key.transparent { color: #aaa; font-style: italic; background: #f5f5f5; }
+.key.hyper { background: #f0e8f5; font-weight: 600; }
+
+/* Spacer rows 0-2 are 10 keys with a 2-wide gap in the middle.
+   Row 3 uses all 12 columns. */
+.row { display: contents; }
+
+.legend { font-size: 9pt; color: #666; margin-top: 16pt; max-width: 9in; }
+.legend .swatch { display: inline-block; width: 10pt; height: 10pt;
+                  border: 1pt solid #888; border-radius: 2pt;
+                  vertical-align: middle; margin-right: 4pt; }
+.legend span.item { margin-right: 16pt; white-space: nowrap; }
+</style></head>
+<body>
+
+<section class="layer">
+  <h1>Layer 0 — BASE</h1>
+  <div class="desc">QWERTY with all modifiers on the thumb row. Tap the Esc key for Esc, hold for Ctrl. Tap Space for space, hold to activate SYM. Tap Bsp for backspace, hold to activate NAV.</div>
+  <div class="matrix">
+<div class="key ">Q</div>
+<div class="key ">W</div>
+<div class="key ">E</div>
+<div class="key ">R</div>
+<div class="key ">T</div>
+<div class="key gap"> </div>
+<div class="key gap"> </div>
+<div class="key ">Y</div>
+<div class="key ">U</div>
+<div class="key ">I</div>
+<div class="key ">O</div>
+<div class="key ">P</div>
+<div class="key ">A</div>
+<div class="key ">S</div>
+<div class="key ">D</div>
+<div class="key ">F</div>
+<div class="key ">G</div>
+<div class="key gap"> </div>
+<div class="key gap"> </div>
+<div class="key ">H</div>
+<div class="key ">J</div>
+<div class="key ">K</div>
+<div class="key ">L</div>
+<div class="key ">;</div>
+<div class="key ">Z</div>
+<div class="key ">X</div>
+<div class="key ">C</div>
+<div class="key ">V</div>
+<div class="key ">B</div>
+<div class="key mouse">BT1</div>
+<div class="key mouse">BT2</div>
+<div class="key ">N</div>
+<div class="key ">M</div>
+<div class="key ">,</div>
+<div class="key ">.</div>
+<div class="key ">/</div>
+<div class="key hyper">Hyper</div>
+<div class="key layer">Esc
+/ Ctrl</div>
+<div class="key special">Tab</div>
+<div class="key mod">⌘</div>
+<div class="key mod">⇧</div>
+<div class="key layer">Space
+/ SYM</div>
+<div class="key layer">Bsp
+/ NAV</div>
+<div class="key special">Enter</div>
+<div class="key mod">⇧</div>
+<div class="key mod">⌘</div>
+<div class="key mod">⌥</div>
+<div class="key special">'</div>
+  </div>
+  <div class="legend">
+    <span class="item"><span class="swatch" style="background:#f0e8f5"></span>Hyper</span>
+    <span class="item"><span class="swatch" style="background:#e8e8f5"></span>Modifier</span>
+    <span class="item"><span class="swatch" style="background:#e8f5e8"></span>Layer (tap/hold)</span>
+    <span class="item"><span class="swatch" style="background:#fff5e6"></span>Special</span>
+    <span class="item"><span class="swatch" style="background:#fde8e8"></span>Trackpoint button</span>
+    <span class="item"><span class="swatch" style="background:#f5f5f5"></span>Transparent (falls to BASE)</span>
+  </div>
+</section>
+
+
+<section class="layer">
+  <h1>Layer 1 — NAV (hold the Backspace key)</h1>
+  <div class="desc">Vim-style arrows on HJKL, page navigation around them, F-keys on the number row, media keys on the left. Everything else falls through to BASE.</div>
+  <div class="matrix">
+<div class="key ">F1</div>
+<div class="key ">F2</div>
+<div class="key ">F3</div>
+<div class="key ">F4</div>
+<div class="key ">F5</div>
+<div class="key gap"> </div>
+<div class="key gap"> </div>
+<div class="key ">F6</div>
+<div class="key ">F7</div>
+<div class="key ">F8</div>
+<div class="key ">F9</div>
+<div class="key ">F10</div>
+<div class="key ">▶❚</div>
+<div class="key ">Vol−</div>
+<div class="key ">Vol+</div>
+<div class="key ">Mute</div>
+<div class="key transparent">—</div>
+<div class="key gap"> </div>
+<div class="key gap"> </div>
+<div class="key ">←</div>
+<div class="key ">↓</div>
+<div class="key ">↑</div>
+<div class="key ">→</div>
+<div class="key special">Del</div>
+<div class="key ">⏮</div>
+<div class="key ">⏭</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key mouse">BT1</div>
+<div class="key mouse">BT2</div>
+<div class="key ">Home</div>
+<div class="key ">PgDn</div>
+<div class="key ">PgUp</div>
+<div class="key ">End</div>
+<div class="key ">F11</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key ">F12</div>
+  </div>
+  <div class="legend">
+    <span class="item"><span class="swatch" style="background:#f0e8f5"></span>Hyper</span>
+    <span class="item"><span class="swatch" style="background:#e8e8f5"></span>Modifier</span>
+    <span class="item"><span class="swatch" style="background:#e8f5e8"></span>Layer (tap/hold)</span>
+    <span class="item"><span class="swatch" style="background:#fff5e6"></span>Special</span>
+    <span class="item"><span class="swatch" style="background:#fde8e8"></span>Trackpoint button</span>
+    <span class="item"><span class="swatch" style="background:#f5f5f5"></span>Transparent (falls to BASE)</span>
+  </div>
+</section>
+
+
+<section class="layer">
+  <h1>Layer 2 — SYM (hold the Space key)</h1>
+  <div class="desc">Numbers on the home row (one row down from a normal keyboard), shifted symbols on the top row, brackets and operators on the third row. Modifier thumbs are transparent — Shift/Cmd/Alt still work while held.</div>
+  <div class="matrix">
+<div class="key ">!</div>
+<div class="key ">@</div>
+<div class="key ">#</div>
+<div class="key ">$</div>
+<div class="key ">%</div>
+<div class="key gap"> </div>
+<div class="key gap"> </div>
+<div class="key ">^</div>
+<div class="key ">&</div>
+<div class="key ">*</div>
+<div class="key ">(</div>
+<div class="key ">)</div>
+<div class="key ">1</div>
+<div class="key ">2</div>
+<div class="key ">3</div>
+<div class="key ">4</div>
+<div class="key ">5</div>
+<div class="key gap"> </div>
+<div class="key gap"> </div>
+<div class="key ">6</div>
+<div class="key ">7</div>
+<div class="key ">8</div>
+<div class="key ">9</div>
+<div class="key ">0</div>
+<div class="key ">`</div>
+<div class="key ">~</div>
+<div class="key ">[</div>
+<div class="key ">]</div>
+<div class="key ">\</div>
+<div class="key mouse">BT1</div>
+<div class="key mouse">BT2</div>
+<div class="key ">−</div>
+<div class="key ">=</div>
+<div class="key ">{</div>
+<div class="key ">}</div>
+<div class="key ">|</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+<div class="key ">_</div>
+<div class="key ">+</div>
+<div class="key transparent">—</div>
+<div class="key transparent">—</div>
+  </div>
+  <div class="legend">
+    <span class="item"><span class="swatch" style="background:#f0e8f5"></span>Hyper</span>
+    <span class="item"><span class="swatch" style="background:#e8e8f5"></span>Modifier</span>
+    <span class="item"><span class="swatch" style="background:#e8f5e8"></span>Layer (tap/hold)</span>
+    <span class="item"><span class="swatch" style="background:#fff5e6"></span>Special</span>
+    <span class="item"><span class="swatch" style="background:#fde8e8"></span>Trackpoint button</span>
+    <span class="item"><span class="swatch" style="background:#f5f5f5"></span>Transparent (falls to BASE)</span>
+  </div>
+</section>
+
+</body></html>
