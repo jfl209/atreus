@@ -64,7 +64,7 @@ CSS = """
 @page { size: letter landscape; margin: 0.5in; }
 body { font-family: -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif;
        color: #222; margin: 0; padding: 0; }
-.layer { page-break-after: always; padding: 0; }
+.layer { page-break-after: always; page-break-inside: avoid; padding: 0; }
 .layer:last-child { page-break-after: auto; }
 h1 { font-size: 18pt; margin: 0 0 4pt 0; font-weight: 600; }
 .desc { font-size: 9.5pt; color: #555; margin-bottom: 14pt; max-width: 9in; line-height: 1.4; }
@@ -88,7 +88,7 @@ h1 { font-size: 18pt; margin: 0 0 4pt 0; font-weight: 600; }
    Row 3 uses all 12 columns. */
 .row { display: contents; }
 
-.legend { font-size: 9pt; color: #666; margin-top: 16pt; max-width: 9in; }
+.legend { font-size: 9pt; color: #666; margin: 0 0 14pt 0; max-width: 9in; }
 .legend .swatch { display: inline-block; width: 10pt; height: 10pt;
                   border: 1pt solid #888; border-radius: 2pt;
                   vertical-align: middle; margin-right: 4pt; }
@@ -119,23 +119,7 @@ def classify(label: str | None) -> str:
     return ""
 
 
-def render_layer(title: str, desc: str, rows: list[list[str | None]]) -> str:
-    cells = []
-    for r, row in enumerate(rows):
-        for label in row:
-            cls = classify(label)
-            text = label if label is not None else " "
-            # In NAV/SYM the trackpoint button cells could read as gaps in
-            # base rendering — keep them showing the mouse icon.
-            cells.append(f'<div class="key {cls}">{text}</div>')
-    matrix_html = "\n".join(cells)
-    return f"""
-<section class="layer">
-  <h1>{title}</h1>
-  <div class="desc">{desc}</div>
-  <div class="matrix">
-{matrix_html}
-  </div>
+LEGEND_HTML = """
   <div class="legend">
     <span class="item"><span class="swatch" style="background:#f0e8f5"></span>Hyper</span>
     <span class="item"><span class="swatch" style="background:#e8e8f5"></span>Modifier</span>
@@ -144,12 +128,39 @@ def render_layer(title: str, desc: str, rows: list[list[str | None]]) -> str:
     <span class="item"><span class="swatch" style="background:#fde8e8"></span>Trackpoint button</span>
     <span class="item"><span class="swatch" style="background:#f5f5f5"></span>Transparent (falls to BASE)</span>
   </div>
+"""
+
+
+def render_layer(title: str, desc: str, rows: list[list[str | None]], include_legend: bool = False) -> str:
+    cells = []
+    for row in rows:
+        for label in row:
+            cls = classify(label)
+            text = label if label is not None else " "
+            cells.append(f'<div class="key {cls}">{text}</div>')
+    matrix_html = "\n".join(cells)
+    # Legend goes above the matrix (in the header area) on the first layer
+    # only — keeps it from getting orphaned to its own page if the matrix
+    # grows too tall.
+    legend = LEGEND_HTML if include_legend else ""
+    return f"""
+<section class="layer">
+  <h1>{title}</h1>
+  <div class="desc">{desc}</div>
+  {legend}
+  <div class="matrix">
+{matrix_html}
+  </div>
 </section>
 """
 
 
 def render_html() -> str:
-    sections = "\n".join(render_layer(t, d, rows) for t, d, rows in LAYERS)
+    # Legend only on the first layer (BASE) — saves a page and is enough.
+    sections = "\n".join(
+        render_layer(t, d, rows, include_legend=(i == 0))
+        for i, (t, d, rows) in enumerate(LAYERS)
+    )
     return f"""<!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>Atreus + Trackpoint keymap</title>
 <style>{CSS}</style></head>
