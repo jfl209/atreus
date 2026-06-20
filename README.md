@@ -2,6 +2,8 @@
 
 QMK firmware for my Keyboardio Atreus + PS/2 TrackPoint mod.
 
+![Atreus with TrackPoint and Commodore 64 keycaps](docs/atreus-c64-caps.png)
+
 The original firmware source was lost. This repo was rebuilt from the running
 keyboard:
 
@@ -16,11 +18,14 @@ the keymap was recovered) and `docs/HARDWARE.md` (what's on the PCBs).
 ## Hardware
 
 - Keyboardio Atreus, ATmega32U4, Caterina bootloader
-- Custom trackpoint daughterboard (KiCad files in `hardware/`), with:
+- Custom trackpoint daughterboard (KiCad files in `hardware/`, gerbers in
+  `hardware/gerbers/`) with:
   - IBM-style PS/2 TrackPoint module
   - 5× WS2811-driven indicator LEDs
-- 3D-printed trackpoint holder (STLs live in iCloud Drive under
-  `Documents/3dprints/atreus trackpoint holder v*.stl`)
+- 3D-printed trackpoint holder (`hardware/3d-printed/atreus trackpoint
+  holder v*.stl`). Iterated through 8 versions in Jan 2021 — v8 is the last,
+  presumably the keeper. The originating CAD (likely Fusion 360) was not
+  recovered.
 
 ## Layout
 
@@ -99,7 +104,9 @@ build, otherwise press the reset button on the underside of the PCB
 │   ├── DECODING.md                   # how the keymap was recovered from the dump
 │   └── HARDWARE.md                   # schematic notes, pin assignments, gotchas
 ├── hardware/
-│   └── atreus_trackpoint.*           # KiCad schematic, PCB, gerbers
+│   ├── atreus_trackpoint.{sch,kicad_pcb,pro,net,lib}
+│   ├── 3d-printed/                   # printable STLs (v1-v8) of trackpoint holder
+│   └── gerbers/                      # PCB fab files
 ├── keyboards/
 │   └── atreus_trackpoint/            # QMK keyboard (symlink into qmk_firmware/keyboards)
 │       ├── atreus_trackpoint.{c,h}
