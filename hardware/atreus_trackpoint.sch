@@ -1,0 +1,463 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 1850 3700 0    50   Input ~ 0
+CLK
+Text GLabel 1850 3800 0    50   Input ~ 0
+DATA
+Text GLabel 1850 3900 0    50   Input ~ 0
+RST
+$Comp
+L Connector:TestPoint TP2
+U 1 1 601D7490
+P 1850 3700
+F 0 "TP2" V 1804 3888 50  0000 L CNN
+F 1 "TestPoint" V 1895 3888 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2050 3700 50  0001 C CNN
+F 3 "~" H 2050 3700 50  0001 C CNN
+	1    1850 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 601D7891
+P 1850 3800
+F 0 "TP3" V 1804 3988 50  0000 L CNN
+F 1 "TestPoint" V 1895 3988 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2050 3800 50  0001 C CNN
+F 3 "~" H 2050 3800 50  0001 C CNN
+	1    1850 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 601D7CD1
+P 1850 3900
+F 0 "TP4" V 1804 4088 50  0000 L CNN
+F 1 "TestPoint" V 1895 4088 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2050 3900 50  0001 C CNN
+F 3 "~" H 2050 3900 50  0001 C CNN
+	1    1850 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 601D83C7
+P 1850 4000
+F 0 "TP5" V 1804 4188 50  0000 L CNN
+F 1 "TestPoint" V 1895 4188 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2050 4000 50  0001 C CNN
+F 3 "~" H 2050 4000 50  0001 C CNN
+	1    1850 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 601DDB0C
+P 4250 2250
+F 0 "TP7" V 4204 2438 50  0000 L CNN
+F 1 "TestPoint" V 4295 2438 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4450 2250 50  0001 C CNN
+F 3 "~" H 4450 2250 50  0001 C CNN
+	1    4250 2250
+	0    1    1    0   
+$EndComp
+Text GLabel 4250 2350 0    50   Input ~ 0
+CLK
+Text GLabel 4250 2450 0    50   Input ~ 0
+DATA
+Text GLabel 4250 2250 0    50   Input ~ 0
+LED
+$Comp
+L Connector:TestPoint TP8
+U 1 1 601DDB18
+P 4250 2350
+F 0 "TP8" V 4204 2538 50  0000 L CNN
+F 1 "TestPoint" V 4295 2538 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4450 2350 50  0001 C CNN
+F 3 "~" H 4450 2350 50  0001 C CNN
+	1    4250 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 601DDB1E
+P 4250 2450
+F 0 "TP9" V 4204 2638 50  0000 L CNN
+F 1 "TestPoint" V 4295 2638 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4450 2450 50  0001 C CNN
+F 3 "~" H 4450 2450 50  0001 C CNN
+	1    4250 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 601DDB2A
+P 4250 2550
+F 0 "TP10" V 4204 2738 50  0000 L CNN
+F 1 "TestPoint" V 4295 2738 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4450 2550 50  0001 C CNN
+F 3 "~" H 4450 2550 50  0001 C CNN
+	1    4250 2550
+	0    1    1    0   
+$EndComp
+Text Notes 1750 3450 0    50   ~ 0
+To Trackpoint
+Text Notes 4200 2100 0    50   ~ 0
+To Keyboard
+Text GLabel 3250 4400 0    50   Input ~ 0
+RST
+$Comp
+L Device:CP C1
+U 1 1 601E4B0E
+P 3400 4400
+F 0 "C1" V 3145 4400 50  0000 C CNN
+F 1 "CP" V 3236 4400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3438 4250 50  0001 C CNN
+F 3 "~" H 3400 4400 50  0001 C CNN
+	1    3400 4400
+	0    1    1    0   
+$EndComp
+Text GLabel 3250 4100 0    50   Input ~ 0
+CLK
+$Comp
+L Device:R R2
+U 1 1 601E5F79
+P 3400 4100
+F 0 "R2" V 3193 4100 50  0000 C CNN
+F 1 "R" V 3284 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3330 4100 50  0001 C CNN
+F 3 "~" H 3400 4100 50  0001 C CNN
+	1    3400 4100
+	0    1    1    0   
+$EndComp
+Text GLabel 3250 4250 0    50   Input ~ 0
+DATA
+$Comp
+L Device:R R3
+U 1 1 601E6569
+P 3400 4250
+F 0 "R3" V 3193 4250 50  0000 C CNN
+F 1 "R" V 3284 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3330 4250 50  0001 C CNN
+F 3 "~" H 3400 4250 50  0001 C CNN
+	1    3400 4250
+	0    1    1    0   
+$EndComp
+Text GLabel 1250 2400 0    50   Input ~ 0
+LED
+Wire Wire Line
+	1250 2400 1500 2400
+Wire Wire Line
+	1350 2500 1350 3150
+Wire Wire Line
+	1350 3150 2600 3150
+Wire Wire Line
+	2600 3150 2600 2400
+Wire Wire Line
+	2600 2400 2800 2400
+$Comp
+L Device:LED D1
+U 1 1 601EA2DE
+P 1650 1450
+F 0 "D1" V 1689 1333 50  0000 R CNN
+F 1 "LED" V 1598 1333 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 1650 1450 50  0001 C CNN
+F 3 "~" H 1650 1450 50  0001 C CNN
+	1    1650 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 601EA4FD
+P 2150 1450
+F 0 "D2" V 2189 1333 50  0000 R CNN
+F 1 "LED" V 2098 1333 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 2150 1450 50  0001 C CNN
+F 3 "~" H 2150 1450 50  0001 C CNN
+	1    2150 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 601EA905
+P 2650 1450
+F 0 "D3" V 2689 1333 50  0000 R CNN
+F 1 "LED" V 2598 1333 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 2650 1450 50  0001 C CNN
+F 3 "~" H 2650 1450 50  0001 C CNN
+	1    2650 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 601EB016
+P 3150 1450
+F 0 "D4" V 3189 1333 50  0000 R CNN
+F 1 "LED" V 3098 1333 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 3150 1450 50  0001 C CNN
+F 3 "~" H 3150 1450 50  0001 C CNN
+	1    3150 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 601EB497
+P 3700 1450
+F 0 "D5" V 3739 1333 50  0000 R CNN
+F 1 "LED" V 3648 1333 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 3700 1450 50  0001 C CNN
+F 3 "~" H 3700 1450 50  0001 C CNN
+	1    3700 1450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1650 1300 1650 1150
+Wire Wire Line
+	1650 1150 2150 1150
+Wire Wire Line
+	3700 1300 3700 1150
+Connection ~ 3700 1150
+Wire Wire Line
+	3700 1150 4050 1150
+Wire Wire Line
+	3150 1300 3150 1150
+Connection ~ 3150 1150
+Wire Wire Line
+	3150 1150 3700 1150
+Wire Wire Line
+	2650 1300 2650 1150
+Connection ~ 2650 1150
+Wire Wire Line
+	2650 1150 3150 1150
+Wire Wire Line
+	2150 1300 2150 1150
+Connection ~ 2150 1150
+Wire Wire Line
+	2150 1150 2650 1150
+Wire Wire Line
+	1650 1600 1650 1800
+Wire Wire Line
+	1650 1800 2300 1800
+Wire Wire Line
+	2300 1800 2300 2400
+Wire Wire Line
+	2150 1600 2150 1750
+Wire Wire Line
+	2150 1750 2350 1750
+Wire Wire Line
+	2350 1750 2350 2500
+Wire Wire Line
+	2350 2500 2300 2500
+Wire Wire Line
+	2300 2600 2400 2600
+Wire Wire Line
+	2400 2600 2400 1700
+Wire Wire Line
+	2400 1700 2650 1700
+Wire Wire Line
+	2650 1700 2650 1600
+Wire Wire Line
+	3150 1800 3650 1800
+Wire Wire Line
+	3650 1800 3650 2400
+Wire Wire Line
+	3650 2400 3600 2400
+Wire Wire Line
+	3600 2500 3700 2500
+Wire Wire Line
+	3700 2500 3700 1600
+NoConn ~ 2800 2500
+Wire Wire Line
+	3150 1600 3150 1800
+NoConn ~ 2800 2600
+NoConn ~ 3600 2600
+$Comp
+L power:VCC #PWR0102
+U 1 1 601E966C
+P 3900 4000
+F 0 "#PWR0102" H 3900 3850 50  0001 C CNN
+F 1 "VCC" H 3917 4173 50  0000 C CNN
+F 2 "" H 3900 4000 50  0001 C CNN
+F 3 "" H 3900 4000 50  0001 C CNN
+	1    3900 4000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1500 2600
+Wire Wire Line
+	3700 3450 3700 3350
+Wire Wire Line
+	3700 3350 3800 3350
+Wire Wire Line
+	3550 3350 3700 3350
+Connection ~ 3700 3350
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 601F96EB
+P 4150 4400
+F 0 "#FLG0101" H 4150 4475 50  0001 C CNN
+F 1 "PWR_FLAG" H 4150 4573 50  0000 C CNN
+F 2 "" H 4150 4400 50  0001 C CNN
+F 3 "~" H 4150 4400 50  0001 C CNN
+	1    4150 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 4550 4150 4400
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 601FAEFD
+P 3700 3200
+F 0 "#FLG0102" H 3700 3275 50  0001 C CNN
+F 1 "PWR_FLAG" H 3700 3373 50  0000 C CNN
+F 2 "" H 3700 3200 50  0001 C CNN
+F 3 "~" H 3700 3200 50  0001 C CNN
+	1    3700 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 3200 3700 3350
+$Comp
+L Driver_LED:WS2811 U2
+U 1 1 601E844B
+P 3200 2500
+F 0 "U2" H 3200 2981 50  0000 C CNN
+F 1 "WS2811" H 3200 2890 50  0000 C CNN
+F 2 "Package_SO:SOP-8_3.76x4.96mm_P1.27mm" H 2900 2650 50  0001 C CNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 3000 2750 50  0001 C CNN
+	1    3200 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2850 3200 2850
+Wire Wire Line
+	3200 2850 3200 2800
+Wire Wire Line
+	3900 4550 4150 4550
+Wire Wire Line
+	3900 4100 3900 4550
+Wire Wire Line
+	3700 4250 3700 4100
+Wire Wire Line
+	3550 4250 3700 4250
+Wire Wire Line
+	3550 4100 3700 4100
+Connection ~ 3700 4100
+Wire Wire Line
+	3700 4100 3900 4100
+Connection ~ 3700 4250
+Wire Wire Line
+	3700 4400 3700 4250
+Wire Wire Line
+	3550 4400 3700 4400
+Connection ~ 3900 4100
+Wire Wire Line
+	3900 4100 3900 4000
+Wire Wire Line
+	4050 4100 3900 4100
+Text GLabel 4050 4100 2    50   Input ~ 0
+VCC
+$Comp
+L Device:R R1
+U 1 1 601E1C7B
+P 3400 3350
+F 0 "R1" V 3193 3350 50  0000 C CNN
+F 1 "R" V 3284 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3330 3350 50  0001 C CNN
+F 3 "~" H 3400 3350 50  0001 C CNN
+	1    3400 3350
+	0    1    1    0   
+$EndComp
+Text GLabel 3250 3350 0    50   Input ~ 0
+RST
+$Comp
+L power:GND #PWR0101
+U 1 1 601E841F
+P 3700 3450
+F 0 "#PWR0101" H 3700 3200 50  0001 C CNN
+F 1 "GND" H 3705 3277 50  0000 C CNN
+F 2 "" H 3700 3450 50  0001 C CNN
+F 3 "" H 3700 3450 50  0001 C CNN
+	1    3700 3450
+	1    0    0    -1  
+$EndComp
+Text GLabel 3800 3350 2    50   Input ~ 0
+GND
+Text GLabel 4050 1150 2    50   Input ~ 0
+VCC
+Wire Wire Line
+	1500 2500 1350 2500
+$Comp
+L Driver_LED:WS2811 U1
+U 1 1 601E7FC9
+P 1900 2500
+F 0 "U1" H 1900 2981 50  0000 C CNN
+F 1 "WS2811" H 1900 2890 50  0000 C CNN
+F 2 "Package_SO:SOP-8_3.76x4.96mm_P1.27mm" H 1600 2650 50  0001 C CNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 1700 2750 50  0001 C CNN
+	1    1900 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2850 1900 2800
+Wire Wire Line
+	2000 2850 1900 2850
+Text GLabel 2000 2100 2    50   Input ~ 0
+VCC
+Text GLabel 2000 2850 2    50   Input ~ 0
+GND
+Text GLabel 3300 2850 2    50   Input ~ 0
+GND
+Text GLabel 4250 2550 0    50   Input ~ 0
+VCC
+Text GLabel 1850 4000 0    50   Input ~ 0
+VCC
+$Comp
+L Connector:TestPoint TP11
+U 1 1 601DDB30
+P 4250 2650
+F 0 "TP11" V 4204 2838 50  0000 L CNN
+F 1 "TestPoint" V 4295 2838 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4450 2650 50  0001 C CNN
+F 3 "~" H 4450 2650 50  0001 C CNN
+	1    4250 2650
+	0    1    1    0   
+$EndComp
+Text GLabel 4250 2650 0    50   Input ~ 0
+GND
+Text GLabel 3300 2100 2    50   Input ~ 0
+VCC
+Wire Wire Line
+	3300 2100 3200 2100
+Wire Wire Line
+	3200 2100 3200 2200
+Wire Wire Line
+	2000 2100 1900 2100
+Wire Wire Line
+	1900 2100 1900 2200
+$Comp
+L Connector:TestPoint TP6
+U 1 1 601D8737
+P 1850 4100
+F 0 "TP6" V 1804 4288 50  0000 L CNN
+F 1 "TestPoint" V 1895 4288 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2050 4100 50  0001 C CNN
+F 3 "~" H 2050 4100 50  0001 C CNN
+	1    1850 4100
+	0    1    1    0   
+$EndComp
+Text GLabel 1850 4100 0    50   Input ~ 0
+GND
+$EndSCHEMATC

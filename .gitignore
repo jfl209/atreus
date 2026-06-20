@@ -1,0 +1,23 @@
+# Build artifacts when building inside a qmk_firmware checkout
+*.o
+*.elf
+*.lst
+*.map
+*.sym
+*.bin.tmp
+
+# Compiled firmware (do NOT ignore dump/*.hex — that's the canonical backup)
+atreus_trackpoint_*.hex
+!dump/*.hex
+
+# Editor / OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# KiCad cruft
+*.bak
+*.kicad_pcb-bak
+*.sch-bak
+fp-info-cache
